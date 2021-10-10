@@ -40,6 +40,7 @@ async function login() {
     try {
         if (!currentUser) {
             currentUser = await Moralis.Web3.authenticate();
+            init()
         }
     } catch (error) {
         console.log(error);
